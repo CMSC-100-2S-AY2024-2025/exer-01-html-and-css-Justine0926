@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@1,300&display=swap');
 
+/*formatting the whole container*/
 .container {
     width: 100%;
     display: flex;
@@ -7,11 +8,12 @@
     justify-content: center;
     align-items: center;
 }
+
+/*format for the navigation bar*/
 #navBar{
     display: flex;
     width: 100%;
     background-color: rgb(212, 212, 212,0.80);
-    margin-top: 0px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -19,21 +21,29 @@
     font-weight: 900;
     font-style: bold;
     justify-content: flex-start;
+    position: fixed; /*makes the navbar stay even when scrolled down*/
+    top:0px;
+    box-shadow:0 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
+/*format for the featured photo*/
 #FeaturedPic{
     display:flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     align-items: center;
+    padding-top: 60px;
+    background-color: rgba(164, 161, 161, 0.034);
 }
 #projects{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 #about{
     display:flex;
@@ -41,17 +51,68 @@
     justify-content: space-around;
     width: 100%;
     align-items: center;
+    background-color: rgba(164, 161, 161, 0.034);
+    border-radius: 5px;
     
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#skillset{
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
+#biography{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#info{
+    max-width: 500px;
+    font-family: "Lato", serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-align: center;
 }
 #footer{
     display: flex;
     width: 100%;
     background-color: rgb(212, 212, 212,0.80);
     margin-top: 10px;
+   
+}
+
+/*changing the fonts*/
+#details{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
     font-family: "Lato", serif;
-    font-weight: 900;
-    font-style: bold;
-    justify-content: flex-start;
+}
+
+#footname{
+    font-weight: bolder;
+    font-size: 24px;
+    margin: 2px;
+}
+#address{
+    font-weight: thin;
+    font-style: italic;
+    font-size: 20px;
+    margin: 2px;
+}
+#connect{
+    font-weight: thin;
+    font-style: italic;
+    font-size: 15px;
+    margin: 2px;
 }
 .title{
     font-family: "Lato", serif;
@@ -64,10 +125,14 @@
     text-decoration:none;
     color: black;
 }
+
+/*hover effect -- changing color*/
 .selector:hover{
     margin: 10px;
     color: rgb(217, 210, 210);
 }
+
+/*logo formats*/
 #logo1{ 
     max-width: 5%;
     width: auto;
@@ -76,19 +141,100 @@
 }
 #logo2{ 
     max-width: 10%;
+    max-height: 10%;
     width: auto;
     height: auto; 
     
 }
+
+/*card format for the photo -- inspired by the ics staff in ics webpage*/
 #pic{
-    max-width: 25%;
     width: auto;
     height: auto;
-    border-radius: 50%;
+    border-radius:5px;
 }
+.card{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#name{
+    font-family: "Lato", serif;
+    font-weight: 900;
+    color: black;
+    margin-bottom: 0px;
+}
+#degree{
+    font-family: "Lato", serif;
+    font-weight: gray;
+    font-style: italic;
+    color: black;
+    font-size: 15px;
+    margin-top: 0px;
+}
+#project{
+    max-width: 500px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2) ;
+    border-radius:3px ;
+
+}
+
+/*putting a background*/
 body{
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(rgb(46, 43, 43),rgb(187, 180, 180));
+    background-image: url(./pictures/background.png);
     background-repeat: no-repeat;
+    background-size:cover;
+    margin: 0;
+    padding:0;
+    
+}
+#icons{
+    display: flex;
+    align-items: center;
+}
+
+/*formatting the icons sourced*/
+.fa {
+    padding: 10px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+.projtitle{
+    font-family: "Lato", serif;
+    margin: 2px;
+    font-weight: bold;
+    font-size: 14;
+    color: antiquewhite;
+}
+.projdetail{
+    font-family: "Lato", serif;
+    margin: 2px;
+    font-style: italic;
+    font-size: 12;
+    color: antiquewhite;
+}
+#back{
+    font-family: "Lato", serif;
+    margin: 2px;
+    font-size: 10;
+    text-decoration:none;
+    color: black;
+}
+#credit{
+    font-family: "Lato", serif;
+    margin: 2px;
+    font-size: 8;
+    font-style: italic;
+    color: black;
 }

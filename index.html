@@ -4,33 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
-    <title>PORTFOLIO</title>
+    <!-- ICON REFERENCE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MY PORTFOLIO</title>
+    <link rel="icon" type="image/x-icon" href="./pictures/logo.png">
 </head>
+
 <body>
+    <!-- div for the whole page -->
     <div class = "container">
+        <!-- div for the logo and navigation bar -->
         <div id = "navBar">
-            <img src="logo.png" alt="logo" id="logo1">
+            <img src="./pictures/logo.png" alt="logo" id="logo1">
+            <!-- selectors for going through different parts of the page-->
             <a class="selector" href="#FeaturedPic">PHOTO</a>
             <a class="selector" href="#projects">PROJECTS</a>
             <a class="selector" href="#about">SKILLS</a>
             <a class="selector" href="#about">ABOUT ME</a>
             <a class="selector" href="#footer">FOOTER</a>
         </div>
+
+        <!-- div for the featured photo -->
         <div id="FeaturedPic">
             <h3 class="title">Featured Photo</h3>
-            <img src="featuredPic.jpeg" alt="1x1" id="pic">
+
+            <!-- div to make a card looking picture -->
+            <div class="card">
+                <img src="./pictures/featuredPic.jpeg" alt="1x1" id="pic" style="width:100%">
+                <!-- another div for the name -->
+                <div class="info">
+                    <p id="name">Justine Raphael H. Jacinto</p>
+                    <p id="degree">BS Computer Science Undergraduate</p>   
+                </div>
+            </div>
         </div>
+
+        <!-- div for the previous projects-->
         <div id="projects">
             <h3 class="title">Previous Projects</h3>
+                <p class="projtitle">TYPING GAME</p>
+                <p class="projdetail">- a typing game on the terminal made using Python.</p>
+                <p class="projtitle">SIMPLEX.ICS </p>
+                <p class="projdetail">- a diet problem solver made using R and RShiny</p>
+                <p class="projtitle">DOODLE FIGHT</p>
+                <p class="projdetail">- a 2D fighting game made using Java and JavaFX</p>
+                <img src="./pictures/projects.gif" alt="proj" id="project">
         </div>
+
+        <!-- div for both skills and autobiography-->
         <div id="about">
-            <h3 class="title">Skills</h3>
-            <h3 class="title">Autobiography</h3>
+            <!-- div for the skills section-->
+            <div id ="skills">
+                <h3 class="title">Skills</h3>
+                <img src="./pictures/skills.png" alt="skill" id="skillset">
+            </div>
+            <!-- div for the biography section-->
+            <div id="biography">
+                <h3 class="title">Autobiography</h3>
+                <p id="info">Hi, I am Justine Raphael H. Jacinto,
+                    currently studying in University of the Philippines - Los Banos. 
+                    My current interests are programming, data analysis, and graphics design.
+                </p>
+            </div>
         </div>
+
+        <!-- div for footer -->
         <div id="footer">
-            <img src="logo.png" alt="logo" id="logo2">
-            <h3 class="title">Footer</h3>
+            <img src="./pictures/logo.png" alt="logo" id="logo2">
+            <!-- div for information in the footer -->
+            <div id="details">
+                <p id="footname">JUSTINE RAPHAEL H. JACINTO</p>
+                <p id="address">4Boys House Ilag's Cmpd UPLB</p>
+                <p id="connect">Connect with me</p>
+                <!-- another div for the icons sourced-->
+                <div id="icons">
+                    <a href="mailto: jhjacinto2@up.edu.ph" class="fa fa-google"></a>
+                    <a href="https://www.facebook.com/justinejacinto0926" class="fa fa-facebook"></a>
+                </div>
+                <!-- selector for going back-->
+                <a id="back" href="#FeaturedPic">Back to Top</a>
+                <p id="credit">© 2025 Justine Raphael H. Jacinto</p>
+            </div>
         </div>
     </div>
 </body>
